@@ -1,94 +1,80 @@
 <!DOCTYPE html>
 <html lang="mn">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Бүтээлийн дэлгэрэнгүй</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бүтээлийн дэлгэрэнгүй — Friend Robot</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="buteel.css">
+  <link rel="stylesheet" href="post.css">
+</head>
+<body>
 
-    <!-- Font Awesome CDN холбоос -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
+  <button id="scroll-top"><i class="fas fa-chevron-up"></i></button>
 
-    <!-- Гадны CSS -->
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="about.css" />
-    <link rel="stylesheet" href="blog.css" />
+  <nav>
+    <img src="img/favicon.ico" class="logo" alt="NEST logo">
+    <span class="nav-brand">NEST Education IT school</span>
+    <div class="navigation">
+      <ul>
+        <i id="menu-close" class="fas fa-times"></i>
+        <li><a href="index.html">Нүүр Хуудас</a></li>
+        <li><a href="buteel.html" class="active">Бүтээлийн танилцуулга</a></li>
+        <li><a href="course-inner.html">Хичээлийн тухай</a></li>
+        <li><a href="contact.html">Холбоо барих</a></li>
+      </ul>
+      <img src="img/menu.png" id="menu-btn" alt="menu">
+    </div>
+  </nav>
 
-    <!-- JQuery CDN холбоос -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    
-    <nav>
-      <img src="img/logo.svg" class="logo" alt="" />
+  <section id="about-home">
+    <h2>Friend Robot — Дэлгэрэнгүй</h2>
+    <p>Манай бүтээлийн тухай дэлгэрэнгүй унших</p>
+  </section>
 
-      <div class="navigation">
-        <ul>
-          <i id="menu-close" class="fas fa-times"></i>
-				<li><a href="index.html" class="active">Нүүр Хуудас</a></li>
-				<li><a href="buteel.html">Бүтээлийн танилцуулга</a></li>
-				<li><a href="course-inner.html" class="active">Хичээлийн тухай</a></li>
-				<li><a href="contact.html">Холбоо барих</a></li>
-        </ul>
+  <div id="blog-container">
+    <div class="blogs blogpost">
+      <div class="post">
 
-        <img src="img/menu.png" id="menu-btn" alt="" />
-      </div>
-    </nav>
+        <img src="img/81cbdec7686660ef7bfd3107352da990.jpeg" alt="Friend Robot">
 
-    <section id="about-home">
-      <h2>Хичээлийн тухай.</h2>
-    </section>
-
-    <!-- Post body starts from here -->
-    <div id="blog-container">
-      <div class="blogs blogpost">
-        <div class="post">
-          <img src="img/b1.jpg" alt="" />
-          <h3>Вэб хөгжүүлэлтийг хамгийн хялбар аргаар сур</h3>
-          <p>
-            Тус компани өөрөө маш амжилттай компани. Учир нь энд, тэнд ялгах нь
-            ижил зүйлийг хийх оюун ухаан юм. Тэд саад тотгорыг хангах, нь!
-            Тиймээс хэн ч хамгийн зохистой хүмүүсийн үүрэг хариуцлага хүлээхийг
-            хүсдэггүй!
-          </p>
-
-          <p>
-            Тус компани өөрөө маш амжилттай компани. Учир нь энд, тэнд ялгах нь
-            ижил зүйлийг хийх оюун ухаан юм. Тэд саад тотгорыг хангах, нь!
-            Тиймээс хэн ч хамгийн зохистой хүмүүсийн үүрэг хариуцлага хүлээхийг
-            хүсдэггүй!
-          </p>
-
-          <p>
-            Тус компани өөрөө маш амжилттай компани. Учир нь энд, тэнд ялгах нь
-            ижил зүйлийг хийх оюун ухаан юм. Тэд саад тотгорыг хангах, нь!
-            Тиймээс хэн ч хамгийн зохистой хүмүүсийн үүрэг хариуцлага хүлээхийг
-            хүсдэггүй!
-          </p>
-
-          <br />
-
-          <a href="#">Үрэгжилүүлж унших</a>
+        <div class="post-meta">
+          <span class="post-tag"><i class="fas fa-robot"></i> Friend Robot</span>
+          <span class="post-date"><i class="fas fa-calendar"></i> 2026</span>
         </div>
+
+        <h3>Friend Robot — Хүүхдийн хамгийн найзуудын найз</h3>
+
+        <p>Манай бүтээл болох Friend Robot нь хүүхдийн өдөр тутмын амьдралд тусалж, найзлах зорилгоор бүтээгдсэн ухаалаг робот юм. Бид Vector болон Eilik роботуудаас санаа авч, өөрийн гэсэн онцлог шинж чанаруудыг нэмж хөгжүүлсэн.</p>
+
+        <p>Роботын гол онцлог бол хүүхдэд 4 өөр үлгэр уншиж чаддаг, нүдээ аних нээх хөдөлгөөн хийдэг, мөн 3 өөр хувцас солих боломжтой. Энэ нь хүүхдүүдийг уйдуулахгүй, унтуулахад тусалж, анхаарлыг нь төвлөрүүлдэг.</p>
+
+        <p>Бид энэ бүтээлийг хийх явцад IoT технологи, электроник, програмчлал зэрэг олон чухал мэдлэг эзэмшсэн. Цаашид роботыг улам боловсронгуй болгохоор төлөвлөж байна.</p>
+
+        <div class="post-actions">
+          <a href="buteel.html"><i class="fas fa-arrow-left"></i> Блог руу буцах</a>
+          <a href="course-inner.html"><i class="fas fa-robot"></i> Бүтээлийн тухай</a>
+        </div>
+
       </div>
     </div>
-    
-    <script>
-      // Show menu links on burger click
-      $("#menu-btn").click(function () {
-        $("nav .navigation ul").addClass("active");
-      });
+  </div>
 
-      // Hide navbar on click function
-      $("#menu-close").click(function () {
-        $("nav .navigation ul").removeClass("active");
-      });
-    </script>
-  </body>
+  <footer>
+    <p>© 2026 NEST Education IT School — Friend Robot DemoDay Project &nbsp;|&nbsp; <a href="contact.html">Холбоо барих</a></p>
+  </footer>
+
+  <script>
+    $('#menu-btn').click(function(){ $('nav .navigation ul').addClass('active'); });
+    $('#menu-close').click(function(){ $('nav .navigation ul').removeClass('active'); });
+    window.addEventListener('scroll', function() {
+      document.getElementById('scroll-top').classList.toggle('show', window.scrollY > 300);
+    });
+    document.getElementById('scroll-top').addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
 </html>
