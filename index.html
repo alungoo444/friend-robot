@@ -3,238 +3,555 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEST DemoDay — Friend Robot</title>
+  <title>Найз Робот — NEST DemoDay 2026</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <button id="scroll-top"><i class="fas fa-chevron-up"></i></button>
-
-  <nav>
-    <img src="unnamed.png" class="logo" alt="NEST logo">
-    <span class="nav-brand">NEST Education IT school</span>
-    <div class="navigation">
-      <ul>
-        <i id="menu-close" class="fas fa-times"></i>
-        <li><a href="index.html" class="active">Нүүр Хуудас</a></li>
-        <li><a href="buteel.html">Бүтээлийн танилцуулга</a></li>
-        <li><a href="course-inner.html">Хичээлийн тухай</a></li>
-        <li><a href="contact.html">Холбоо барих</a></li>
-      </ul>
-      <img src="img/menu.png" id="menu-btn" alt="menu">
+ 
+<canvas id="particles"></canvas>
+<button id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+ 
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="school.ico" alt="NEST" onerror="this.style.display='none'">
+      <span>NEST Education</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <i id="menu-close" class="fas fa-times"></i>
+      <li><a href="index.html" class="active">Нүүр</a></li>
+      <li><a href="studies.html">Судалгаа</a></li>
+      <li><a href="buteel.html">Бүтээл</a></li>
+      <li><a href="contact.html">Холбоо</a></li>
+    </ul>
+    <img src="img/menu.png" id="menu-btn" alt="menu" onerror="this.style.display='none'">
+  </div>
+</nav>
+ 
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-chip"><i class="fas fa-wifi"></i> NEST DemoDay 2026 · RFID Story Player</div>
+    <h1 class="glow-title">НАЙЗ РОБОТ</h1>
+    <p class="sub-glow">RFID карт ашиглан хүүхдэд үлгэр уншиж өгдөг ухаалаг ширээний тоглуулагч — Juuke</p>
+    <div class="hero-btns">
+      <a href="studies.html" class="btn-primary"><i class="fas fa-book-open"></i> Судалгаа үзэх</a>
+      <a href="buteel.html" class="btn-ghost"><i class="fas fa-robot"></i> Бүтээлийн тухай</a>
     </div>
-  </nav>
-
-  <section id="home">
-    <h2>Friend Robot — Хүүхдийн хамгийн найзууд 🤖</h2>
-    <p>NEST Education IT сургуулийн DemoDay-д зориулан бүтээсэн ухаалаг робот. Нүдээ аних, үлгэр уншиж, хань болдог.</p>
-    <div class="btn">
-      <a href="course-inner.html" class="blue"><i class="fas fa-robot"></i> Бүтээлийн тухай</a>
-      <a href="buteel.html" class="yellow"><i class="fas fa-book-open"></i> Блог үзэх</a>
+    <div class="hero-stats">
+      <div class="hstat"><span class="hstat-num">2</span><span class="hstat-label">Үлгэр</span></div>
+      <div class="hstat-sep"></div>
+      <div class="hstat"><span class="hstat-num">RFID</span><span class="hstat-label">Карт</span></div>
+      <div class="hstat-sep"></div>
+      <div class="hstat"><span class="hstat-num">4</span><span class="hstat-label">Гишүүн</span></div>
+      <div class="hstat-sep"></div>
+      <div class="hstat"><span class="hstat-num">Arduino</span><span class="hstat-label">Технологи</span></div>
     </div>
-  </section>
-
-  <section id="project">
-    <div class="section-header">
-      <span class="section-tag">Технологи</span>
-      <h1>Төсөлд ашигласан технологууд</h1>
-      <p>Бид эдгээр хэрэгслүүдийг ашиглан вэб сайтаа бүтээсэн</p>
+  </div>
+</section>
+ 
+<!-- ABOUT -->
+<section id="about" class="container section-gap">
+  <div class="section-header">
+    <span class="section-tag">Төслийн тухай</span>
+    <h2 class="section-title">Juuke гэж юу вэ?</h2>
+    <p class="section-sub">RFID технологи дээр суурилсан хүүхдийн үлгэр уншигч</p>
+  </div>
+  <div class="about-grid">
+    <div class="glass-card">
+      <div class="card-icon"><i class="fas fa-wifi"></i></div>
+      <h3>RFID карт</h3>
+      <p>Хүүхэд RFID карт хавсаргахад л хүссэн үлгэрээ тоглуулна. Хялбар, хурдан, найдвартай.</p>
     </div>
-    <div class="project-box">
-
-      <div class="projects">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
-        <div class="details">
-          <span>Вэб хуудасны бүтэц</span>
-          <h6>HTML5</h6>
-          <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>Үндсэн хэрэгсэл</span></div>
-        </div>
-        <div class="cost">FREE</div>
-      </div>
-
-      <div class="projects">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
-        <div class="details">
-          <span>Загвар, өнгө, дизайн</span>
-          <h6>CSS3</h6>
-          <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>Дизайн хэрэгсэл</span></div>
-        </div>
-        <div class="cost">FREE</div>
-      </div>
-
-      <div class="projects">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-        <div class="details">
-          <span>Динамик функцууд</span>
-          <h6>JavaScript</h6>
-          <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>Хөдөлгөөнт хэсэг</span></div>
-        </div>
-        <div class="cost">FREE</div>
-      </div>
-
-      <div class="projects">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
-        <div class="details">
-          <span>Код хуваалцах платформ</span>
-          <h6>GitHub</h6>
-          <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>Хамтын ажиллагаа</span></div>
-        </div>
-        <div class="cost">FREE</div>
-      </div>
-
-      <div class="projects">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
-        <div class="details">
-          <span>Код бичих хэрэгсэл</span>
-          <h6>Visual Studio Code</h6>
-          <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>Редактор</span></div>
-        </div>
-        <div class="cost">FREE</div>
-      </div>
-
-      <div class="projects">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
-        <div class="details">
-          <span>UI/UX дизайн хийх</span>
-          <h6>Figma</h6>
-          <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>Дизайн хэрэгсэл</span></div>
-        </div>
-        <div class="cost">FREE</div>
-      </div>
-
+    <div class="glass-card">
+      <div class="card-icon"><i class="fas fa-book-reader"></i></div>
+      <h3>Gogo Matar үлгэр</h3>
+      <p>Монгол хүүхдийн дуртай Gogo Matar үлгэрийг тоглуулж, уншиж өгнө.</p>
     </div>
-  </section>
-
-  <section id="registration">
-    <div class="reminder">
-      <p>📅 DemoDay ойртож байна!</p>
-      <h1>Бидэнтэй нэгдээрэй</h1>
+    <div class="glass-card">
+      <div class="card-icon"><i class="fas fa-volume-up"></i></div>
+      <h3>Чанартай дуу</h3>
+      <p>Speaker ашиглан тод, тодорхой дуу хоолойгоор үлгэр тоглуулна.</p>
+    </div>
+    <div class="glass-card">
+      <div class="card-icon"><i class="fas fa-moon"></i></div>
+      <h3>Унтуулах тусламж</h3>
+      <p>Оройн цагаар үлгэр сонсгож хүүхдийг тайван унтуулахад туслана.</p>
+    </div>
+  </div>
+</section>
+ 
+<!-- DEMO -->
+<section id="demo" class="container section-gap">
+  <div class="section-header">
+    <span class="section-tag">Демо</span>
+    <h2 class="section-title">Үлгэр сонсох</h2>
+    <p class="section-sub">RFID карт сонгоод үлгэрийг тоглуулаарай</p>
+  </div>
+ 
+  <div class="demo-grid">
+ 
+    <!-- LEFT: Juuke device -->
+    <div class="glass-card" style="padding:0;overflow:hidden;">
+      <div class="juuke-stage">
+ 
+        <!-- Juuke SVG -->
+        <div class="juuke-svg-wrap">
+          <svg class="juuke-device" viewBox="0 0 180 260" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#0d1b3d"/></linearGradient>
+              <linearGradient id="scr" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0c2044"/><stop offset="100%" stop-color="#071530"/></linearGradient>
+              <linearGradient id="crd" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2563eb"/><stop offset="100%" stop-color="#8b5cf6"/></linearGradient>
+              <linearGradient id="btn" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2563eb"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+            </defs>
+            <!-- Body -->
+            <rect x="15" y="30" width="150" height="210" rx="22" fill="url(#bg)" stroke="rgba(96,165,250,0.45)" stroke-width="1.5"/>
+            <!-- Screen bezel -->
+            <rect x="26" y="42" width="128" height="76" rx="11" fill="#0a1628" stroke="rgba(56,189,248,0.28)" stroke-width="1"/>
+            <!-- Screen -->
+            <rect id="svgScreen" x="30" y="46" width="120" height="68" rx="8" fill="url(#scr)"/>
+            <!-- Idle text -->
+            <text id="svgIdle" x="90" y="84" text-anchor="middle" font-family="Poppins,sans-serif" font-size="9" fill="rgba(103,232,249,0.65)" font-weight="600">TAP RFID CARD</text>
+            <!-- Playing title lines (hidden) -->
+            <text id="svgT1" x="90" y="76" text-anchor="middle" font-family="Poppins,sans-serif" font-size="8.5" fill="rgba(200,222,248,0.85)" font-weight="600" display="none"></text>
+            <text id="svgT2" x="90" y="90" text-anchor="middle" font-family="Poppins,sans-serif" font-size="7.5" fill="rgba(103,232,249,0.7)" font-weight="400" display="none"></text>
+            <!-- Waveform bars -->
+            <g id="svgWave" opacity="0">
+              <rect class="svgBar" x="38"  y="98" width="5" height="10" rx="2.5" fill="#67e8f9"/>
+              <rect class="svgBar" x="48"  y="94" width="5" height="14" rx="2.5" fill="#38bdf8"/>
+              <rect class="svgBar" x="58"  y="96" width="5" height="12" rx="2.5" fill="#67e8f9"/>
+              <rect class="svgBar" x="68"  y="92" width="5" height="16" rx="2.5" fill="#a78bfa"/>
+              <rect class="svgBar" x="78"  y="95" width="5" height="13" rx="2.5" fill="#38bdf8"/>
+              <rect class="svgBar" x="88"  y="97" width="5" height="11" rx="2.5" fill="#67e8f9"/>
+              <rect class="svgBar" x="98"  y="93" width="5" height="15" rx="2.5" fill="#a78bfa"/>
+              <rect class="svgBar" x="108" y="96" width="5" height="12" rx="2.5" fill="#38bdf8"/>
+              <rect class="svgBar" x="118" y="94" width="5" height="14" rx="2.5" fill="#67e8f9"/>
+              <rect class="svgBar" x="128" y="98" width="5" height="10" rx="2.5" fill="#38bdf8"/>
+            </g>
+            <!-- Speaker grille -->
+            <g fill="rgba(96,165,250,0.3)">
+              <circle cx="34" cy="140" r="2"/><circle cx="43" cy="140" r="2"/><circle cx="52" cy="140" r="2"/>
+              <circle cx="61" cy="140" r="2"/><circle cx="70" cy="140" r="2"/><circle cx="79" cy="140" r="2"/>
+              <circle cx="88" cy="140" r="2"/><circle cx="97" cy="140" r="2"/><circle cx="106" cy="140" r="2"/>
+              <circle cx="115" cy="140" r="2"/><circle cx="124" cy="140" r="2"/><circle cx="133" cy="140" r="2"/>
+              <circle cx="142" cy="140" r="2"/><circle cx="34" cy="149" r="2"/><circle cx="43" cy="149" r="2"/>
+              <circle cx="52" cy="149" r="2"/><circle cx="61" cy="149" r="2"/><circle cx="70" cy="149" r="2"/>
+              <circle cx="79" cy="149" r="2"/><circle cx="88" cy="149" r="2"/><circle cx="97" cy="149" r="2"/>
+              <circle cx="106" cy="149" r="2"/><circle cx="115" cy="149" r="2"/><circle cx="124" cy="149" r="2"/>
+              <circle cx="133" cy="149" r="2"/><circle cx="142" cy="149" r="2"/>
+            </g>
+            <!-- RFID slot -->
+            <rect x="50" y="170" width="80" height="26" rx="8" fill="#0a1628" stroke="rgba(56,189,248,0.3)" stroke-width="1"/>
+            <text x="90" y="186" text-anchor="middle" font-family="Poppins,sans-serif" font-size="7.5" fill="rgba(103,232,249,0.5)" font-weight="700">RFID SLOT</text>
+            <!-- Card scan anim -->
+            <rect id="svgCard" x="52" y="172" width="76" height="22" rx="6" fill="url(#crd)" opacity="0"/>
+            <!-- LED -->
+            <circle cx="90" cy="217" r="5" fill="rgba(34,197,94,0.65)">
+              <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+            </circle>
+            <!-- Volume knob -->
+            <circle cx="42" cy="217" r="9" fill="#0d1b3d" stroke="rgba(56,189,248,0.28)" stroke-width="1.2"/>
+            <line x1="42" y1="210" x2="42" y2="214" stroke="rgba(103,232,249,0.7)" stroke-width="1.8" stroke-linecap="round"/>
+            <!-- Play button -->
+            <circle cx="138" cy="217" r="9" fill="url(#btn)"/>
+            <polygon points="135.5,213.5 135.5,220.5 142,217" fill="rgba(255,255,255,0.85)"/>
+            <!-- Antenna -->
+            <line x1="90" y1="30" x2="90" y2="14" stroke="rgba(96,165,250,0.55)" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="90" cy="11" r="4.5" fill="#67e8f9" opacity="0.85">
+              <animate attributeName="opacity" values="0.4;1;0.4" dur="1.4s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+          <div class="juuke-screen-glow" id="screenGlow"></div>
+        </div>
+ 
+        <p class="card-slot-label"><i class="fas fa-wifi" style="color:#38bdf8;margin-right:5px;"></i> RFID карт сонгоно уу</p>
+ 
+        <!-- RFID cards -->
+        <div class="rfid-cards-row">
+          <div class="rfid-card" id="card-1" onclick="selectCard(1)">
+            <span class="rfid-icon">📖</span>
+            <span class="rfid-label">Gogo Matar<br>1-р хэсэг</span>
+          </div>
+          <div class="rfid-card" id="card-2" onclick="selectCard(2)">
+            <span class="rfid-icon">🌟</span>
+            <span class="rfid-label">Gogo Matar<br>2-р хэсэг</span>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+ 
+    <!-- RIGHT: Story panel -->
+    <div class="story-panel">
+      <div class="story-img-wrap">
+        <img id="storyImage" class="story-image"
+          src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+          alt="Үлгэр">
+        <div class="now-playing-bar" id="nowPlayingBar">
+          <div class="np-dot"></div>
+          <span class="np-title" id="npTitle">—</span>
+        </div>
+      </div>
+ 
+      <div class="story-text-box" id="storyText">
+        RFID карт сонгоход үлгэрийн текст энд гарч ирнэ.
+      </div>
+ 
+      <div class="progress-wrap">
+        <div class="progress-bg"><div class="progress-fill" id="progFill"></div></div>
+        <span class="progress-time" id="progTime">0:00</span>
+      </div>
+ 
+      <div class="playback-controls">
+        <button class="ctrl-btn ctrl-play"  id="btnPlay"  onclick="playAudio()"><i class="fas fa-play"></i> Тоглуулах</button>
+        <button class="ctrl-btn ctrl-pause" id="btnPause" onclick="pauseAudio()" style="display:none"><i class="fas fa-pause"></i> Түр зогсоох</button>
+        <button class="ctrl-btn ctrl-stop"  onclick="stopAudio()"><i class="fas fa-stop"></i> Зогсоох</button>
+        <div class="wave-wrap" id="voiceWave">
+          <div class="wave-bar"></div><div class="wave-bar"></div>
+          <div class="wave-bar"></div><div class="wave-bar"></div>
+          <div class="wave-bar"></div><div class="wave-bar"></div>
+          <div class="wave-bar"></div><div class="wave-bar"></div>
+        </div>
+      </div>
+ 
+      <!-- Volume -->
+      <div style="display:flex;align-items:center;gap:10px;margin-top:4px;">
+        <i class="fas fa-volume-down" style="color:#7dd3fc;font-size:14px;"></i>
+        <input type="range" id="volSlider" min="0" max="1" step="0.05" value="0.8"
+          style="flex:1;accent-color:#38bdf8;cursor:pointer;">
+        <i class="fas fa-volume-up" style="color:#7dd3fc;font-size:14px;"></i>
+      </div>
+ 
+    </div>
+  </div>
+ 
+  <!-- Hidden audio element -->
+  <audio id="mainAudio" preload="auto"></audio>
+ 
+</section>
+ 
+<!-- TECH -->
+<section id="tech" class="container section-gap">
+  <div class="section-header">
+    <span class="section-tag">Технологи</span>
+    <h2 class="section-title">Ашигласан технологууд</h2>
+    <p class="section-sub">Juuke болон вэб сайт бүтээхэд ашигласан хэрэгслүүд</p>
+  </div>
+  <div class="tech-grid">
+    <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"><h4>HTML5</h4><p>Вэб бүтэц</p><span class="tech-badge">FREE</span></div>
+    <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"><h4>CSS3</h4><p>Дизайн</p><span class="tech-badge">FREE</span></div>
+    <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS"><h4>JavaScript</h4><p>Функцууд</p><span class="tech-badge">FREE</span></div>
+    <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"><h4>GitHub</h4><p>Хуваалцах</p><span class="tech-badge">FREE</span></div>
+    <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode"><h4>VS Code</h4><p>Редактор</p><span class="tech-badge">FREE</span></div>
+    <div class="tech-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"><h4>Figma</h4><p>UI/UX</p><span class="tech-badge">FREE</span></div>
+  </div>
+</section>
+ 
+<!-- COUNTDOWN -->
+<section class="container section-gap">
+  <div class="countdown-wrap">
+    <div class="cd-left">
+      <p class="cd-chip">📅 DemoDay хүртэл үлдсэн хугацаа</p>
+      <h2 class="cd-title">Бидэнтэй нэгдээрэй</h2>
       <div class="time">
-        <div class="date" id="days">0<span>Days</span></div>
-        <div class="date" id="hours">0<span>Hours</span></div>
-        <div class="date" id="minutes">0<span>Minutes</span></div>
-        <div class="date" id="seconds">0<span>Seconds</span></div>
+        <div class="date" id="days">0<span>Өдөр</span></div>
+        <div class="date" id="hours">0<span>Цаг</span></div>
+        <div class="date" id="minutes">0<span>Минут</span></div>
+        <div class="date" id="seconds">0<span>Секунд</span></div>
       </div>
     </div>
-    <div class="form">
-      <h3>Яг одоо бүртгүүлээрэй!</h3>
-      <input type="text" placeholder="Таны нэр">
-      <input type="email" placeholder="И-мэйл хаяг">
-      <input type="text" placeholder="Утасны дугаар">
-      <div class="btn">
-        <a href="#" class="yellow"><i class="fas fa-paper-plane"></i> Бүртгүүлэх</a>
+    <div class="register-form">
+      <h3>Бүртгүүлэх</h3>
+      <input type="text"  id="regName"  placeholder="Таны нэр">
+      <input type="email" id="regEmail" placeholder="И-мэйл хаяг">
+      <input type="tel"   id="regPhone" placeholder="Утасны дугаар">
+      <button class="btn-primary" onclick="register()" style="width:100%;border-radius:10px;justify-content:center;">
+        <i class="fas fa-paper-plane"></i> Бүртгүүлэх
+      </button>
+    </div>
+  </div>
+</section>
+ 
+<!-- TEAM -->
+<section id="team" class="container section-gap">
+  <div class="section-header">
+    <span class="section-tag">Баг</span>
+    <h2 class="section-title">Багийн гишүүд</h2>
+    <p class="section-sub">Juuke бүтээсэн дөрвөн гишүүн</p>
+  </div>
+  <div class="team-grid">
+    <div class="team-card">
+      <img src="khuln.jpeg" alt="Хулан" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="team-avatar" style="display:none">Х</div>
+      <h3>Хулан</h3>
+      <div class="role-tags"><span><i class="fas fa-code"></i> Coding</span><span><i class="fas fa-palette"></i> Design</span></div>
+      <div class="pro-links">
+        <a href="https://www.facebook.com/b.hulan.138850/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/khulnaaaa__" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&to=nest22291037@nhs.edu.mn" target="_blank"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
-  </section>
-
-  <section id="experts">
-    <div class="section-header">
-      <span class="section-tag">Баг</span>
-      <h1>Багийн гишүүд</h1>
-      <p>Манай гайхалтай багийн бүрэлдэхүүн</p>
+    <div class="team-card">
+      <img src="michid.jpeg" alt="Мичид" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="team-avatar" style="display:none">М</div>
+      <h3>Мичид</h3>
+      <div class="role-tags"><span><i class="fas fa-code"></i> Coding</span><span><i class="fas fa-laptop"></i> Web</span></div>
+      <div class="pro-links">
+        <a href="https://www.facebook.com/micid.c.407413/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/michid.c" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&to=nest22291030@nhs.edu.mn" target="_blank"><i class="fas fa-envelope"></i></a>
+      </div>
     </div>
-    <div class="expert-box">
-
-      <div class="profile">
-        <img src="khuln.jpg" alt="Хулан">
-        <h6>Хулан</h6>
-        <div class="role-tags">
-          <span><i class="fas fa-code"></i> Coding</span>
-          <span><i class="fas fa-palette"></i> Web design</span>
-        </div>
-        <div class="pro-links">
-          <a href="https://www.facebook.com/b.hulan.138850/" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://instagram.com/khulnaaaa__" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://mail.google.com/mail/?view=cm&to=nest22291037@nhs.edu.mn" target="_blank"><i class="fas fa-envelope"></i></a>
-        </div>
+    <div class="team-card">
+      <img src="saruul.jpeg" alt="Энхсаруул" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="team-avatar" style="display:none">Э</div>
+      <h3>Энхсаруул</h3>
+      <div class="role-tags"><span><i class="fas fa-file-alt"></i> Documents</span><span><i class="fas fa-code"></i> Coding</span></div>
+      <div class="pro-links">
+        <a href="https://www.facebook.com/enkhsaruul.bayaraa" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/__srlux" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&to=nest23291005@nhs.edu.mn" target="_blank"><i class="fas fa-envelope"></i></a>
       </div>
-
-      <div class="profile">
-        <img src="michid.jpeg" alt="Мичид">
-        <h6>Мичид</h6>
-        <div class="role-tags">
-          <span><i class="fas fa-code"></i> Coding</span>
-          <span><i class="fas fa-laptop"></i> Web design</span>
-        </div>
-        <div class="pro-links">
-          <a href="https://www.facebook.com/micid.c.407413/" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://instagram.com/michid.c" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://mail.google.com/mail/?view=cm&to=nest22291030@nhs.edu.mn" target="_blank"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
-
-      <div class="profile">
-        <img src="saruul.jpg" alt="Энхсаруул">
-        <h6>Энхсаруул</h6>
-        <div class="role-tags">
-          <span><i class="fas fa-file-alt"></i> Documents</span>
-          <span><i class="fas fa-code"></i> Coding</span>
-        </div>
-        <div class="pro-links">
-          <a href="https://www.facebook.com/enkhsaruul.bayaraa" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://instagram.com/__srlux" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://mail.google.com/mail/?view=cm&to=nest23291005@nhs.edu.mn" target="_blank"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
-
-      <div class="profile">
-        <img src="alungoo.jpeg" alt="Алунгоо">
-        <h6>Алунгоо</h6>
-        <div class="role-tags">
-          <span><i class="fas fa-code"></i> Coding</span>
-          <span><i class="fas fa-tshirt"></i> Designer</span>
-        </div>
-        <div class="pro-links">
-          <a href="https://www.facebook.com/alungoo.tvn/" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://instagram.com/alungootvn" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://mail.google.com/mail/?view=cm&to=nest22291042@nhs.edu.mn" target="_blank"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
-
     </div>
-  </section>
-
-  <footer>
-    <p>© 2026 NEST Education IT School — Friend Robot DemoDay Project &nbsp;|&nbsp; <a href="contact.html">Холбоо барих</a></p>
-  </footer>
-
-  <script>
-    $('#menu-btn').click(function(){ $('nav .navigation ul').addClass('active'); });
-    $('#menu-close').click(function(){ $('nav .navigation ul').removeClass('active'); });
-    $('nav .navigation ul li a').click(function(){ $('nav .navigation ul').removeClass('active'); });
-
-    window.addEventListener('scroll', function() {
-      document.getElementById('scroll-top').classList.toggle('show', window.scrollY > 400);
-    });
-    document.getElementById('scroll-top').addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    function updateCountdown() {
-      const gap = new Date("May 9, 2026 09:00:00").getTime() - new Date().getTime();
-      if (gap < 0) {
-        document.querySelector(".time").innerHTML = "<h2 style='color:#fff;'>🎉 DemoDay is here!</h2>";
-        return;
-      }
-      document.getElementById("days").innerHTML    = Math.floor(gap/(1000*60*60*24)) + "<span>Days</span>";
-      document.getElementById("hours").innerHTML   = Math.floor((gap%(1000*60*60*24))/(1000*60*60)) + "<span>Hours</span>";
-      document.getElementById("minutes").innerHTML = Math.floor((gap%(1000*60*60))/(1000*60)) + "<span>Minutes</span>";
-      document.getElementById("seconds").innerHTML = Math.floor((gap%(1000*60))/1000) + "<span>Seconds</span>";
-    }
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }});
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.projects, .profile').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(30px)';
-      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-      observer.observe(el);
-    });
-  </script>
+    <div class="team-card">
+      <img src="alungoo.jpeg" alt="Алунгоо" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="team-avatar" style="display:none">А</div>
+      <h3>Алунгоо</h3>
+      <div class="role-tags"><span><i class="fas fa-code"></i> Coding</span><span><i class="fas fa-tshirt"></i> Designer</span></div>
+      <div class="pro-links">
+        <a href="https://www.facebook.com/alungoo.tvn/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/alungootvn" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&to=nest22291042@nhs.edu.mn" target="_blank"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<div class="toast" id="toast"></div>
+ 
+<footer>
+  <div class="footer-inner">
+    <p class="footer-title">НЭСТ ЭДҮКЭЙШН ДУНД СУРГУУЛЬ</p>
+    <p class="footer-sub">2025–2026 оны хичээлийн жил &nbsp;·&nbsp; Juuke — Найз Робот DemoDay төсөл</p>
+    <div class="footer-links">
+      <a href="studies.html"><i class="fas fa-book-open"></i> Судалгаа</a>
+      <a href="buteel.html"><i class="fas fa-robot"></i> Бүтээл</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i> Холбоо</a>
+    </div>
+  </div>
+</footer>
+ 
+<script>
+/* PARTICLES */
+(function(){
+  const c=document.getElementById('particles'),x=c.getContext('2d');let P=[];
+  function resize(){c.width=innerWidth;c.height=innerHeight;}
+  function init(){P=[];const n=Math.min(130,Math.floor(innerWidth/13));for(let i=0;i<n;i++)P.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*2+.4,dx:(Math.random()-.5)*.1,dy:(Math.random()-.5)*.1,a:Math.random()*.6+.2});}
+  function draw(){x.clearRect(0,0,c.width,c.height);for(const p of P){x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);x.fillStyle=`rgba(255,255,255,${p.a})`;x.fill();p.x+=p.dx;p.y+=p.dy;if(p.x<0||p.x>c.width)p.dx*=-1;if(p.y<0||p.y>c.height)p.dy*=-1;}requestAnimationFrame(draw);}
+  resize();init();draw();window.addEventListener('resize',()=>{resize();init();});
+})();
+ 
+/* NAV */
+document.getElementById('menu-btn').addEventListener('click',()=>document.getElementById('navLinks').classList.add('active'));
+document.getElementById('menu-close').addEventListener('click',()=>document.getElementById('navLinks').classList.remove('active'));
+document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('active')));
+window.addEventListener('scroll',()=>{
+  document.getElementById('mainNav').classList.toggle('scrolled',scrollY>50);
+  document.getElementById('scroll-top').classList.toggle('show',scrollY>400);
+});
+document.getElementById('scroll-top').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+ 
+/* SCROLL REVEAL */
+const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:.08});
+document.querySelectorAll('.glass-card,.tech-card,.team-card,.countdown-wrap').forEach(el=>{
+  el.style.opacity='0';el.style.transform='translateY(26px)';el.style.transition='opacity .55s ease,transform .55s ease';ro.observe(el);
+});
+ 
+/* COUNTDOWN */
+function tick(){
+  const gap=new Date("May 9, 2026 09:00:00").getTime()-Date.now();
+  if(gap<0){document.querySelector('.time').innerHTML="<h2 style='color:#67e8f9'>🎉 DemoDay is here!</h2>";return;}
+  document.getElementById('days').innerHTML=Math.floor(gap/864e5)+"<span>Өдөр</span>";
+  document.getElementById('hours').innerHTML=Math.floor((gap%864e5)/36e5)+"<span>Цаг</span>";
+  document.getElementById('minutes').innerHTML=Math.floor((gap%36e5)/6e4)+"<span>Минут</span>";
+  document.getElementById('seconds').innerHTML=Math.floor((gap%6e4)/1e3)+"<span>Секунд</span>";
+}
+tick();setInterval(tick,1000);
+ 
+/* TOAST */
+function toast(msg,dur=3200){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),dur);}
+ 
+/* REGISTER */
+function register(){
+  const n=document.getElementById('regName').value.trim();
+  const e=document.getElementById('regEmail').value.trim();
+  if(!n){toast('⚠️ Нэрээ оруулна уу');return;}
+  if(!e||!e.includes('@')){toast('⚠️ Зөв и-мэйл оруулна уу');return;}
+  toast('✅ Амжилттай бүртгүүллээ!');
+  document.getElementById('regName').value='';
+  document.getElementById('regEmail').value='';
+  document.getElementById('regPhone').value='';
+}
+ 
+/* ── JUUKE PLAYER ── */
+const audio      = document.getElementById('mainAudio');
+const storyText  = document.getElementById('storyText');
+const storyImage = document.getElementById('storyImage');
+const npBar      = document.getElementById('nowPlayingBar');
+const npTitle    = document.getElementById('npTitle');
+const voiceWave  = document.getElementById('voiceWave');
+const progFill   = document.getElementById('progFill');
+const progTime   = document.getElementById('progTime');
+const btnPlay    = document.getElementById('btnPlay');
+const btnPause   = document.getElementById('btnPause');
+const screenGlow = document.getElementById('screenGlow');
+const svgIdle    = document.getElementById('svgIdle');
+const svgT1      = document.getElementById('svgT1');
+const svgT2      = document.getElementById('svgT2');
+const svgWave    = document.getElementById('svgWave');
+const svgCard    = document.getElementById('svgCard');
+ 
+// Inject waveform keyframe
+const s=document.createElement('style');
+s.textContent='@keyframes waveUp{0%{height:4px}100%{height:30px}}';
+document.head.appendChild(s);
+ 
+const stories = {
+  1: {
+    title: 'Gogo Matar — 1-р хэсэг',
+    src:   'gogomatar1.m4a',
+    image: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80',
+    text:  'Gogo Matar үлгэрийн 1-р хэсэг тоглож байна...\n\nАудио файл: gogomatar1.m4a'
+  },
+  2: {
+    title: 'Gogo Matar — 2-р хэсэг',
+    src:   'gogomatar2.m4a',
+    image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=900&q=80',
+    text:  'Gogo Matar үлгэрийн 2-р хэсэг тоглож байна...\n\nАудио файл: gogomatar2.m4a'
+  }
+};
+ 
+let curCard = null;
+ 
+/* RFID card scan animation */
+function animCard(){
+  let op=0;
+  const show=setInterval(()=>{op+=.12;svgCard.setAttribute('opacity',Math.min(op,.85));if(op>=.85)clearInterval(show);},25);
+  setTimeout(()=>{
+    let op2=.85;
+    const hide=setInterval(()=>{op2-=.12;svgCard.setAttribute('opacity',Math.max(op2,0));if(op2<=0)clearInterval(hide);},25);
+  },700);
+}
+ 
+/* Set screen state */
+function screenPlaying(title){
+  svgIdle.setAttribute('display','none');
+  svgT1.setAttribute('display','block'); svgT1.textContent=title.substring(0,20);
+  svgT2.setAttribute('display','block'); svgT2.textContent='▶ Playing';
+  svgWave.setAttribute('opacity','0.85');
+  screenGlow.classList.add('active');
+  // animate bars
+  document.querySelectorAll('.svgBar').forEach((b,i)=>{
+    b.style.animation=`waveUp ${.55+i*.06}s ease-in-out infinite alternate`;
+  });
+}
+function screenIdle(){
+  svgIdle.setAttribute('display','block');
+  svgT1.setAttribute('display','none');
+  svgT2.setAttribute('display','none');
+  svgWave.setAttribute('opacity','0');
+  screenGlow.classList.remove('active');
+  document.querySelectorAll('.svgBar').forEach(b=>b.style.animation='none');
+}
+ 
+/* Select card */
+window.selectCard = function(num){
+  const story = stories[num];
+  if(!story) return;
+ 
+  // stop current
+  audio.pause(); audio.currentTime=0;
+  setPlaying(false);
+ 
+  curCard = num;
+ 
+  // update UI
+  document.querySelectorAll('.rfid-card').forEach(c=>c.classList.remove('active'));
+  document.getElementById('card-'+num).classList.add('active');
+  animCard();
+ 
+  storyImage.src = story.image;
+  storyText.textContent = story.title + '\n\n' + story.text;
+  npTitle.textContent = story.title;
+  npBar.classList.add('show');
+ 
+  audio.src = story.src;
+  audio.load();
+  progFill.style.width='0%';
+  progTime.textContent='0:00';
+  screenPlaying(story.title);
+ 
+  toast('📖 ' + story.title + ' — Тоглуулахын тулд Тоглуулах дарна уу');
+};
+ 
+/* Play */
+window.playAudio = function(){
+  if(!curCard){ toast('⚠️ Эхлэн RFID карт сонгоно уу'); return; }
+  audio.volume = parseFloat(document.getElementById('volSlider').value);
+  audio.play().then(()=>{
+    setPlaying(true);
+  }).catch(err=>{
+    toast('⚠️ audio/ хавтсанд gogomatar'+curCard+'.mp3 файл байхгүй байна');
+    console.warn('Audio error:', err);
+  });
+};
+ 
+/* Pause */
+window.pauseAudio = function(){
+  audio.pause();
+  setPlaying(false);
+};
+ 
+/* Stop */
+window.stopAudio = function(){
+  audio.pause(); audio.currentTime=0;
+  setPlaying(false);
+  progFill.style.width='0%';
+  progTime.textContent='0:00';
+  document.querySelectorAll('.rfid-card').forEach(c=>c.classList.remove('active'));
+  npBar.classList.remove('show');
+  storyText.textContent='RFID карт сонгоход үлгэрийн текст энд гарч ирнэ.';
+  screenIdle(); curCard=null;
+};
+ 
+function setPlaying(on){
+  if(on){
+    btnPlay.style.display='none';
+    btnPause.style.display='inline-flex';
+    voiceWave.classList.add('active');
+  } else {
+    btnPlay.style.display='inline-flex';
+    btnPause.style.display='none';
+    voiceWave.classList.remove('active');
+  }
+}
+ 
+/* Audio events */
+audio.addEventListener('timeupdate',()=>{
+  if(!audio.duration) return;
+  const pct=(audio.currentTime/audio.duration)*100;
+  progFill.style.width=pct+'%';
+  const s=Math.floor(audio.currentTime);
+  progTime.textContent=Math.floor(s/60)+':'+(s%60<10?'0':'')+s%60;
+});
+audio.addEventListener('ended',()=>{ setPlaying(false); progFill.style.width='100%'; toast('✅ Үлгэр дуусав!'); });
+audio.addEventListener('pause',()=>setPlaying(false));
+audio.addEventListener('play', ()=>setPlaying(true));
+ 
+/* Volume */
+document.getElementById('volSlider').addEventListener('input',function(){ audio.volume=parseFloat(this.value); });
+</script>
 </body>
 </html>

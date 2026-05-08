@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Судалгаа — Найз Робот</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="particles"></canvas>
+<button id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="school.ico" alt="NEST" onerror="this.style.display='none'">
+      <span>NEST Education</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <i id="menu-close" class="fas fa-times"></i>
+      <li><a href="index.html">Нүүр</a></li>
+      <li><a href="studies.html" class="active">Судалгаа</a></li>
+      <li><a href="buteel.html">Бүтээл</a></li>
+      <li><a href="contact.html">Холбоо</a></li>
+    </ul>
+    <img src="img/menu.png" id="menu-btn" alt="menu" onerror="this.style.display='none'">
+  </div>
+</nav>
+
+<section id="page-hero">
+  <span class="section-tag">Судалгааны ажил</span>
+  <h1>Үлгэр унших нь хүүхдэд яагаад ашигтай вэ?</h1>
+  <p>Juuke төслийн эрдэм шинжилгээний үндэслэл</p>
+</section>
+
+<div class="container section-gap">
+  <div class="studies-layout">
+
+    <div class="study-article">
+
+      <div class="study-block">
+        <h2><i class="fas fa-book-open"></i> Судалгааны танилцуулга</h2>
+        <p>Манай баг Juuke төслийг хийхдээ нэг чухал асуулт тавьсан: <strong style="color:#67e8f9;">Үлгэр сонсох нь хүүхдийн хөгжилд яагаад ашигтай вэ?</strong></p>
+        <div class="write-here">✏️ ЭНД БИЧНЭ ҮҮ — Судалгааны зорилго, энэ сэдвийг яагаад сонгосон тухай бичнэ үү.</div>
+      </div>
+
+      <div class="study-block">
+        <h2><i class="fas fa-comments"></i> Хэл яриаг хөгжүүлэх нөлөө</h2>
+        <p>Судлаачдын олон тооны судалгаа нотолж байгаагаар үлгэр сонсдог хүүхдүүд илүү баялаг үгийн сантай болж, ярих чадвар нь хурдан хөгждөг.</p>
+        <div class="write-here">✏️ ЭНД БИЧНЭ ҮҮ — Хэлний хөгжилд үлгэр унших нөлөөллийн талаарх таны судалгааны дүгнэлт, жишээнүүдийг бичнэ үү.</div>
+      </div>
+
+      <div class="study-block">
+        <h2><i class="fas fa-heart"></i> Сэтгэл хөдлөлийн хөгжил</h2>
+        <p>Үлгэрийн баатруудтай танилцснаар хүүхэд эмпати буюу бусдын сэтгэлийг ойлгох чадвараа хөгжүүлдэг.</p>
+        <div class="write-here">✏️ ЭНД БИЧНЭ ҮҮ — Сэтгэл хөдлөлийн хөгжил, нийгмийн ур чадварт үлгэр хэрхэн нөлөөлдөг талаар бичнэ үү.</div>
+      </div>
+
+      <div class="study-block">
+        <h2><i class="fas fa-moon"></i> Унтах дэглэм ба тайвшрал</h2>
+        <p>Оройн цагаар үлгэр сонсох нь хүүхдийг тайвшруулж, унтах дэглэмийг тогтооход тусалдаг гэдгийг судалгаа харуулдаг.</p>
+        <div class="write-here">✏️ ЭНД БИЧНЭ ҮҮ — Унтах дэглэм, тайвшрах нөлөөллийн талаар бичнэ үү.</div>
+      </div>
+
+      <div class="study-block">
+        <h2><i class="fas fa-wifi"></i> Яагаад RFID технологи ашиглах вэ?</h2>
+        <p>Эцэг эх завгүй үедээ хүүхдэд анхаарал хандуулах боломжгүй болдог. Juuke RFID картаар хялбар ажилладаг тул хүүхэд өөрөө ашиглаж чаддаг.</p>
+        <div class="write-here">✏️ ЭНД БИЧНЭ ҮҮ — RFID технологийн давуу тал, хүүхдэд хэрхэн ашигтай болохын талаар бичнэ үү.</div>
+      </div>
+
+      <div class="study-block">
+        <h2><i class="fas fa-flag-checkered"></i> Дүгнэлт</h2>
+        <div class="write-here">✏️ ЭНД БИЧНЭ ҮҮ — Судалгааны ерөнхий дүгнэлт. Та ямар дүгнэлтэд хүрсэн бэ?</div>
+        <div class="write-here" style="margin-top:10px;">✏️ ЭНД БИЧНЭ ҮҮ — Цаашдын хөгжүүлэлтийн санал, зөвлөмжүүд.</div>
+      </div>
+
+    </div>
+
+    <div class="study-sidebar">
+      <div class="sidebar-card">
+        <h3>Судалгааны сэдвүүд</h3>
+        <span class="sidebar-tag">Хүүхдийн хөгжил</span>
+        <span class="sidebar-tag">Үлгэр унших</span>
+        <span class="sidebar-tag">Хэлний чадвар</span>
+        <span class="sidebar-tag">Сэтгэл хөдлөл</span>
+        <span class="sidebar-tag">RFID технологи</span>
+        <span class="sidebar-tag">Унтах дэглэм</span>
+        <span class="sidebar-tag">Arduino</span>
+      </div>
+      <div class="sidebar-card">
+        <h3>Холбогдох хэсгүүд</h3>
+        <a href="index.html#demo" class="sidebar-link"><i class="fas fa-play"></i> Үлгэр сонсох</a>
+        <a href="buteel.html"     class="sidebar-link"><i class="fas fa-robot"></i> Бүтээлийн тухай</a>
+        <a href="contact.html"    class="sidebar-link"><i class="fas fa-envelope"></i> Холбоо барих</a>
+      </div>
+      <div class="sidebar-card">
+        <h3><i class="fas fa-book" style="color:#38bdf8;margin-right:6px;"></i> Эх сурвалжууд</h3>
+        <div class="ref-item"><span class="ref-num">[1]</span><span class="ref-text">✏️ Эх сурвалжийн нэр, зохиогч, он</span></div>
+        <div class="ref-item"><span class="ref-num">[2]</span><span class="ref-text">✏️ Эх сурвалжийн нэр, зохиогч, он</span></div>
+        <div class="ref-item"><span class="ref-num">[3]</span><span class="ref-text">✏️ Эх сурвалжийн нэр, зохиогч, он</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <p class="footer-title">НЭСТ ЭДҮКЭЙШН ДУНД СУРГУУЛЬ</p>
+    <p class="footer-sub">2025–2026 оны хичээлийн жил &nbsp;·&nbsp; Juuke — Найз Робот DemoDay төсөл</p>
+    <div class="footer-links">
+      <a href="studies.html"><i class="fas fa-book-open"></i> Судалгаа</a>
+      <a href="buteel.html"><i class="fas fa-robot"></i> Бүтээл</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i> Холбоо</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){const c=document.getElementById('particles'),x=c.getContext('2d');let P=[];function resize(){c.width=innerWidth;c.height=innerHeight;}function init(){P=[];const n=Math.min(120,Math.floor(innerWidth/14));for(let i=0;i<n;i++)P.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*2+.4,dx:(Math.random()-.5)*.09,dy:(Math.random()-.5)*.09,a:Math.random()*.6+.2});}function draw(){x.clearRect(0,0,c.width,c.height);for(const p of P){x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);x.fillStyle=`rgba(255,255,255,${p.a})`;x.fill();p.x+=p.dx;p.y+=p.dy;if(p.x<0||p.x>c.width)p.dx*=-1;if(p.y<0||p.y>c.height)p.dy*=-1;}requestAnimationFrame(draw);}resize();init();draw();window.addEventListener('resize',()=>{resize();init();});})();
+document.getElementById('menu-btn').addEventListener('click',()=>document.getElementById('navLinks').classList.add('active'));
+document.getElementById('menu-close').addEventListener('click',()=>document.getElementById('navLinks').classList.remove('active'));
+window.addEventListener('scroll',()=>{document.getElementById('mainNav').classList.toggle('scrolled',scrollY>50);document.getElementById('scroll-top').classList.toggle('show',scrollY>400);});
+document.getElementById('scroll-top').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:.08});
+document.querySelectorAll('.study-block').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(22px)';el.style.transition='opacity .5s ease,transform .5s ease';ro.observe(el);});
+</script>
+</body>
+</html>
